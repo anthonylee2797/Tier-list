@@ -9,14 +9,30 @@ class Tiers extends Component {
   constructor(){
     super()
     this.state = {
-      'storage': [{'image': '/cs.png' ,'tier': null},{'image': '/fsa.png','tier': null} ]
+      'storage': []
     }
     this.setTier = this.setTier.bind(this)
+    this.reset = this.reset.bind(this)
+  }
+
+
+  async componentDidMount(){
+    console.log('mounting')
+    let response = await fetch('/getData')
+
+    let data = await response.json()
+    this.setState(() => {
+      return {
+        storage: data.storage
+      }
+    })
+
+    // console.log('consoleloggin!',this.state.storage)
+
   }
 
 
   setTier(image, tier){
-    console.log(image, tier)
     const copy = this.state.storage
     copy.map((el) => {
       if (el.image === image){
@@ -26,6 +42,18 @@ class Tiers extends Component {
     this.setState(() => {
       return{
         storage: copy
+      }
+    })
+  }
+
+  reset(){
+    const newCopy = this.state.storage;
+    newCopy.map((el) => {
+      el.tier = 'null'
+    })
+    this.setState(() => {
+      return {
+        storage: newCopy
       }
     })
   }
@@ -54,9 +82,17 @@ class Tiers extends Component {
               <Card img={el.image} />
             ))}
         </BoxComponent>
+              <button className='reset-button' onClick={this.reset}>Reset</button>
+        <Storage className='storage' tier='null' setTier={this.setTier}>
+            {this.state.storage.filter((el) => el.tier === 'null').map((el) => (
+              <Card img={el.image} />
+            ))}
+        </Storage>
 
-
-        <Storage  storage={this.state.storage}/>
+        {/* <Storage tier='null'>{this.state.storage.filter((el) => el.tier === 'null').map((el) => (
+          <Card img={el.image} />
+        ))}</Storage> */}
+        {/* <Storage  storage={this.state.storage}/> */}
      </div>
  
     )

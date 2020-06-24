@@ -18,7 +18,6 @@ const Card = props => {
 
   return (
     <span className='card' ref={drag} style={{opacity: isDragging ? '0.5' : '1' }} >
-    {/* props.img */}
         <img src={props.img}></img>
     </span>
   )

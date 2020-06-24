@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     mode: 'development',
-    entry: './client/index.js',
+    entry: ['@babel/polyfill','./client/index.js'],
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: 'bundle.js',
@@ -37,8 +37,12 @@ module.exports = {
     devServer: {
       contentBase: [path.join(__dirname, '/'),path.join(__dirname, '/client/assets')],
       publicPath: 'http://localhost:8080/dist/',
+      proxy: {
+        '/getData': 'http://localhost:3000',
+      }
     },
     plugins: [
+      
         new HtmlWebPackPlugin({
          template: './index.html'
         }),     ]
