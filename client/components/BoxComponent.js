@@ -22,7 +22,7 @@ const BoxComponent = props => {
 
   return (
     <div className='box'>
-      <Box className='box' ref={drop} style={{backgroundColor: isOver ? "#bccbde" : '#8bf0ba'}}  w="100%" p={2} color="black"><h1 className='test'>{props.tier} {props.children}</h1></Box>
+      <Box className='box' ref={drop} style={{backgroundColor: isOver ? "#ABABAB" : '#f5f5f1'}}  w="100%" p={2} color="black"><h1 className='test'>{props.tier} {props.children}</h1></Box>
     </div>
   )
 }

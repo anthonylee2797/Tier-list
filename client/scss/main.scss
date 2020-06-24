@@ -4,9 +4,9 @@
 }
 
 body {
-    background-color: #e2dfd6;
+    background-color: #141414;
     font-family: 'Pangolin', cursive;
-
+    color: #E50914;
     text-align: center;
 }
 //  #card span {
@@ -40,8 +40,8 @@ h1 {
 	background: none;
 	font-family: inherit;
 	font-size: inherit;
-    border: 3px solid #fff;
-	color: #fff;
+    border: 3px solid rgb(0, 0, 0);
+	color: rgb(0, 0, 0);
 	cursor: pointer;
 	padding: 25px 80px;
 	display: inline-block;
@@ -56,7 +56,7 @@ h1 {
 }
 
 .reset-button:hover {
-    color: #888;
+    color: #E50914;
 }
 
 .storage {
