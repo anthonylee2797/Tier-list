@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div>
       <DndProvider backend={HTML5Backend} >
-          <h1 className='margin-20'>Rank Your Favorite Netflix Shows</h1>
+          <h1 className='margin-20'>Netflix Shows Tier List</h1>
           <Tiers />
       </DndProvider>
       </div>

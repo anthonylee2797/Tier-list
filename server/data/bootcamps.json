@@ -20,11 +20,11 @@
        "tier":"null"
     },
     {
-       "image":"/netflix/houseOfCards.png",
+       "image":"/netflix/7deadly.jpg",
        "tier":"null"
     },
     {
-       "image":"/netflix/itaewon.jpg",
+       "image":"/netflix/colony.jpg",
        "tier":"null"
     },
     
@@ -33,7 +33,7 @@
       "tier":"null"
    },
    {
-      "image":"/netflix/narcos.png",
+      "image":"/netflix/flash.jpg",
       "tier":"null"
    },
    {
@@ -41,12 +41,12 @@
       "tier":"null"
    },
    {
-      "image":"/netflix/ozark.jpeg",
+      "image":"/netflix/kim.jpg",
       "tier":"null"
    },
    
    {
-      "image":"/netflix/strangerThings.png",
+      "image":"/netflix/loveisblind.jpg",
       "tier":"null"
    },
    {
@@ -54,12 +54,23 @@
       "tier":"null"
    },
    {
-      "image":"/netflix/vampire.jpg",
+      "image":"/netflix/OA.jpg",
       "tier":"null"
    },
    {
       "image":"/netflix/you.jpg",
       "tier":"null"
    }
+   ,
+   {
+      "image":"/netflix/travelers.jpg",
+      "tier":"null"
+   }
+   ,
+   {
+      "image":"/netflix/umbrella.jpg",
+      "tier":"null"
+   }
+
     
  ]

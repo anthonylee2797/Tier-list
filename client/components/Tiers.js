@@ -77,8 +77,8 @@ class Tiers extends Component {
               <Card img={el.image} />
             ))}
         </BoxComponent>
-        <BoxComponent className='box' tier='F' setTier={this.setTier}>
-            {this.state.storage.filter((el) => el.tier === 'F').map((el) => (
+        <BoxComponent className='box' tier='no' setTier={this.setTier}>
+            {this.state.storage.filter((el) => el.tier === 'no').map((el) => (
               <Card img={el.image} />
             ))}
         </BoxComponent>
